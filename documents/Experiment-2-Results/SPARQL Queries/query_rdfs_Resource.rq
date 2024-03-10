@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK {
+  SELECT (count(*) as ?count)
+  WHERE {
+    ?s a rdfs:Resource .
+  }
+  GROUP BY ?s
+  HAVING (COUNT(?s) = 1)
+}

@@ -1,0 +1,8 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT (COUNT(*) AS ?count)
+WHERE {
+  ?person foaf:based_near ?location .
+}
+GROUP BY ?person 
+HAVING (COUNT(*) = 1)

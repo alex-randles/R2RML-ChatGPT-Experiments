@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?resource
+WHERE {
+  ?resource rdfs:comment ?comment .
+  FILTER NOT EXISTS { 
+    ?resource rdfs:comment ?otherComment .
+    FILTER (?otherComment != ?comment)
+  }
+}

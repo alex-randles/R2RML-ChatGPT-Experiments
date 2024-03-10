@@ -1,0 +1,6 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <http://example.com/> .
+
+ex:entity1 a prov:Entity ;
+  prov:wasDerivedFrom ex:data1 ;
+  prov:wasGeneratedBy ex:process1 .

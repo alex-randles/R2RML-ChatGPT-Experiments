@@ -1,0 +1,11 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+
+ex:book1 a ex:Book ;
+   skos:member ex:collection .
+
+ex:collection a skos:Collection ;
+   skos:member ex:book1, ex:book2 .
+   
+ex:book2 a ex:Book ;
+   skos:member ex:collection .

@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix ex: <http://example.com#> .
+
+ex:shape
+  rdf:type sh:NodeShape ;
+  sh:property [
+    sh:path prov:location ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] .

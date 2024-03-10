@@ -1,0 +1,9 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <http://www.example.com/> .
+
+ex:person1 a prov:Agent ;
+    prov:name 'John Doe' ;
+    prov:hadActivity ex:activity1 .
+
+ex:activity1 a prov:Activity ;
+    prov:wasAssociatedWith ex:person1 .

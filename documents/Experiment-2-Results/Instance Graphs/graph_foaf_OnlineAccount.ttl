@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+foaf:AccountOwner a rdf:Class .
+
+foaf:OnlineAccount a rdf:Class ;
+    rdfs:subClassOf foaf:OnlineChatAccount .
+
+foaf:account a rdf:Property ;
+    rdfs:domain foaf:AccountOwner ;
+    rdfs:range foaf:OnlineAccount .
+
+foaf:homepage a rdf:Property ;
+    rdfs:domain foaf:OnlineAccount ;
+    rdfs:range rdfs:Resource .
+
+foaf:accountName a rdf:Property ;
+    rdfs:domain foaf:OnlineAccount ;
+    rdfs:range xsd:string .
+
+foaf:accountServiceHomepage a rdf:Property ;
+    rdfs:domain foaf:OnlineAccount ;
+    rdfs:range rdfs:Resource .

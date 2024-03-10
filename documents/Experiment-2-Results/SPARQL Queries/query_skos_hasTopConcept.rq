@@ -1,0 +1,8 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT (COUNT(?topConcept) AS ?count)
+WHERE {
+  ?scheme skos:hasTopConcept ?topConcept .
+}
+GROUP BY ?scheme
+HAVING (COUNT(?topConcept) = 1)

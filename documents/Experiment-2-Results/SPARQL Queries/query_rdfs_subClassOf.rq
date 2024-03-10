@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?class (COUNT(?parent) AS ?count)
+WHERE {
+  ?class rdfs:subClassOf ?parent .
+}
+GROUP BY ?class
+HAVING (COUNT(?parent) = 1)

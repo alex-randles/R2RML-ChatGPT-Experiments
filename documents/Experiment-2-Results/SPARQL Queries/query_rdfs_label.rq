@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?s
+WHERE {
+  ?s rdfs:label ?label.
+  FILTER NOT EXISTS {
+    ?s rdfs:label ?otherLabel.
+    FILTER (?otherLabel != ?label)
+  }
+}

@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/ns#> .
+
+ex:Collection rdf:type rdf:Bag ;
+    rdf:_1 ex:Item1 ;
+    rdf:_2 ex:Item2 ;
+    rdf:_3 ex:Item3 ;
+    rdf:_4 ex:Item4 .

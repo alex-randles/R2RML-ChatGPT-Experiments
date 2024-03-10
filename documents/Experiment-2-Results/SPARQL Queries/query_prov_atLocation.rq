@@ -1,0 +1,8 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+SELECT ?instance
+WHERE {
+  ?instance prov:atLocation ?location1 .
+  FILTER NOT EXISTS {
+    ?instance prov:atLocation ?location2 FILTER (?location1 != ?location2)
+  }
+}

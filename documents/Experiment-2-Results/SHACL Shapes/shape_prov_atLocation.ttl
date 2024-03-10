@@ -1,0 +1,10 @@
+PREFIX ex: <http://example.org/>
+
+ex:shape
+  rdf:type sh:NodeShape ;
+  sh:targetClass prov:Location ;
+  sh:property [
+    sh:path prov:atLocation ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+  ] .

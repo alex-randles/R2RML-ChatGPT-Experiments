@@ -1,0 +1,10 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT ?subject
+WHERE {
+  ?subject prov:wasGeneratedBy ?value .
+  FILTER NOT EXISTS {
+    ?subject prov:wasGeneratedBy ?otherValue .
+    FILTER (?value != ?otherValue)
+  }
+}

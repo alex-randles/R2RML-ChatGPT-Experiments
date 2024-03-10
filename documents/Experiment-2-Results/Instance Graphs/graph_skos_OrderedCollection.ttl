@@ -1,0 +1,14 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+skos:myOrderedCollection rdf:type skos:OrderedCollection ;
+  skos:member skos:concept1 , skos:concept2 , skos:concept3 .
+
+skos:concept1 rdf:type skos:Concept ;
+  skos:prefLabel 'Concept 1' .
+
+skos:concept2 rdf:type skos:Concept ;
+  skos:prefLabel 'Concept 2' .
+
+skos:concept3 rdf:type skos:Concept ;
+  skos:prefLabel 'Concept 3' .

@@ -1,0 +1,38 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+
+ex:cat a skos:Concept ;
+  skos:prefLabel 'Cat' ;
+  skos:altLabel 'Kitty' ;
+  skos:related ex:domesticAnimal ;
+  skos:broader ex:mammal .
+
+ex:dog a skos:Concept ;
+  skos:prefLabel 'Dog' ;
+  skos:altLabel 'Puppy' ;
+  skos:related ex:domesticAnimal ;
+  skos:broader ex:mammal .
+
+ex:mammal a skos:Concept ;
+  skos:prefLabel 'Mammal' ;
+  skos:altLabel 'Animal' ;
+  skos:related ex:vertebrate ;
+  skos:narrower ex:cat ;
+  skos:narrower ex:dog .
+
+ex:domesticAnimal a skos:Concept ;
+  skos:prefLabel 'Domestic animal' ;
+  skos:altLabel 'Pet' ;
+  skos:related ex:animal ;
+  skos:broader ex:animal .
+
+ex:animal a skos:Concept ;
+  skos:prefLabel 'Animal' ;
+  skos:altLabel 'Creature' ;
+  skos:related ex:nature .
+
+ex:vertebrate a skos:Concept ;
+  skos:prefLabel 'Vertebrate' ;
+  skos:altLabel 'Animal with backbone' ;
+  skos:related ex:animal ;
+  skos:broader ex:animal .

@@ -1,0 +1,13 @@
+@prefix ex: <http://example.com/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Person a rdfs:Class ;
+  rdfs:label 'Person' ;
+  rdfs:comment 'A human being.' .
+
+ex:name a rdf:Property ;
+  rdfs:label 'name' ;
+  rdfs:comment 'The name of a person.' ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .

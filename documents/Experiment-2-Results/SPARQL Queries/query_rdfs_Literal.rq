@@ -1,0 +1,5 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT (COUNT(?literal) AS ?literal_count)
+WHERE {
+    ?literal a rdfs:Literal .
+}

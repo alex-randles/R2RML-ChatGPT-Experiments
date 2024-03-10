@@ -1,0 +1,7 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+ASK {
+  ?person foaf:accountName ?name1 .
+  ?person foaf:accountName ?name2 .
+  FILTER (?name1 != ?name2)
+}

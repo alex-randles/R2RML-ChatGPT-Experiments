@@ -1,0 +1,70 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+<#TriplesMap1>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-1/";
+        rr:class rdfs:Resource;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "COLUMN_NAME_1" ];
+    ].
+
+<#TriplesMap2>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-2/";
+        rr:class rdfs:Literal;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment;
+        rr:objectMap [ rr:column "COLUMN_NAME_2" ];
+    ].
+
+<#TriplesMap3>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-3/";
+        rr:class rdfs:Class;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:domain;
+        rr:objectMap [ rr:column "COLUMN_NAME_3" ];
+    ].
+
+<#TriplesMap4>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-4/";
+        rr:class rdfs:Datatype;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:range;
+        rr:objectMap [ rr:column "COLUMN_NAME_4" ];
+    ].
+
+<#TriplesMap5>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-5/";
+        rr:class rdfs:Container;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment;
+        rr:objectMap [ rr:column "COLUMN_NAME_5" ];
+    ].
+
+<#TriplesMap6>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-6/";
+        rr:class foaf:Person;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:subClassOf ;
+        rr:object foaf:Agent ;
+    ].
+

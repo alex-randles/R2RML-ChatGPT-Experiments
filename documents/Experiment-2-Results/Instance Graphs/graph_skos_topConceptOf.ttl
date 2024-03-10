@@ -1,0 +1,7 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+
+ex:myConcept a skos:Concept ;
+  skos:topConceptOf ex:myScheme .
+  
+ex:myScheme a skos:ConceptScheme .

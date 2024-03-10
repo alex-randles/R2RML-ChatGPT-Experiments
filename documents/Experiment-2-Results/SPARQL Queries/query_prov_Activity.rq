@@ -1,0 +1,8 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT (COUNT(?activity) AS ?activityCount)
+WHERE {
+  ?activity a prov:Activity .
+}
+GROUP BY ?activity
+HAVING (COUNT(?activity) = 1)

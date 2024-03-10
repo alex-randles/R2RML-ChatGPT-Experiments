@@ -1,0 +1,8 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.com/my-group>
+    a foaf:Group ;
+    foaf:name 'My Group' ;
+    foaf:member <http://example.com/john-doe> ,
+        <http://example.com/jane-doe> ;
+    foaf:homepage <http://example.com/my-group-page> .

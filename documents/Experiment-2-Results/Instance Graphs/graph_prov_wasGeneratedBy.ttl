@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.org/document> prov:wasGeneratedBy <http://example.org/tool> .
+
+<http://example.org/tool> 
+  rdf:type prov:Software ;
+  prov:wasAttributedTo <http://example.org/developer> .

@@ -1,0 +1,10 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ex: <http://example.com/>
+
+SELECT DISTINCT ?s WHERE {
+  ?s prov:generatedAtTime ?t .
+  FILTER NOT EXISTS {
+    ?s prov:generatedAtTime ?t2 .
+    FILTER (?t != ?t2)
+  }
+}

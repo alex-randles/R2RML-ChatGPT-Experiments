@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <http://example.org/> .
+
+ex:entity1
+  a prov:Entity ;
+  prov:atLocation ex:location1 .
+
+ex:location1 
+  a prov:Location ;
+  prov:latitude '51.5072' ;
+  prov:longitude '-0.1276' .

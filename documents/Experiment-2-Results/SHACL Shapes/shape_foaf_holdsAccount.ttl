@@ -1,0 +1,15 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ex:    <http://example.com/shapes#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+ex:shape a sh:NodeShape ;
+  sh:targetClass foaf:Person ;
+  sh:property [
+    sh:path foaf:holdsAccount ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message 'Exactly one value must exist for holdsAccount'
+  ] .

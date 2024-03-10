@@ -1,0 +1,13 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://example.com/person/Jane>
+  a foaf:Person ;
+  foaf:name 'Jane Doe' ;
+  foaf:age 35 ;
+  foaf:gender 'female' .
+
+<http://example.com/person/John>
+  a foaf:Person ;
+  foaf:name 'John Smith' ;
+  foaf:age 42 ;
+  foaf:gender 'male' .

@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT (COUNT(*) as ?count)
+WHERE {
+    ?subject ?predicate ?object .
+    FILTER(isURI(?subject) && isURI(?predicate) && isURI(?object))
+    FILTER(!isBlank(?subject) && !isBlank(?predicate) && !isBlank(?object))
+    FILTER(?predicate = rdf:subject || ?predicate = rdf:predicate || ?predicate = rdf:object)
+}
+GROUP BY ?predicate
+HAVING (COUNT(*) = 1 && ?predicate = rdf:Statement)

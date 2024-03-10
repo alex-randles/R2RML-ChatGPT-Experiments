@@ -1,0 +1,9 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX example: <http://example.com/>
+
+SELECT ?s (COUNT(?s) AS ?count)
+WHERE {
+  ?s rdf:subject example:exampleConcept .
+}
+GROUP BY ?s
+HAVING (COUNT(?s) = 1)

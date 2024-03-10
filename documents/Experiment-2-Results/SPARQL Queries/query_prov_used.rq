@@ -1,0 +1,8 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT ?entity
+WHERE {
+  ?activity prov:used ?entity .
+}
+GROUP BY ?activity
+HAVING (COUNT(?entity) = 1)

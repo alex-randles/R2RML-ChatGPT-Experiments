@@ -1,0 +1,7 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/document>
+  rdf:type prov:Entity ;
+  prov:generatedAtTime '2021-08-10T12:00:00Z'^^xsd:dateTime .

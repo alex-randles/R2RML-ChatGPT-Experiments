@@ -1,0 +1,19 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/> .
+
+ex:myList a skos:Concept ;
+  skos:prefLabel 'My List' ;
+  skos:memberList (
+    ex:item1
+    ex:item2
+    ex:item3
+  ) .
+  
+ex:item1 a skos:Concept ;
+  skos:prefLabel 'Item 1' .
+  
+ex:item2 a skos:Concept ;
+  skos:prefLabel 'Item 2' .
+  
+ex:item3 a skos:Concept ;
+  skos:prefLabel 'Item 3' .

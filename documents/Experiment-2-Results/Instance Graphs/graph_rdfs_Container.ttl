@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/mycontainer>
+  rdf:type rdfs:Container ;
+  rdfs:label 'This is my container' ;
+  rdfs:member <http://example.org/resource1>,
+             <http://example.org/resource2> ;
+  .
+  
+<http://example.org/resource1>
+  rdfs:label 'Resource 1' ;
+  .
+  
+<http://example.org/resource2>
+  rdfs:label 'Resource 2' ;
+  .

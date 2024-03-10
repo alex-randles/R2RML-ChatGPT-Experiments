@@ -1,0 +1,10 @@
+SPARQL
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+ASK {
+  ?c skos:memberList ?list .
+  NOT EXISTS { 
+      ?c skos:memberList ?otherList .
+      FILTER ( ?list != ?otherList )
+  }
+}

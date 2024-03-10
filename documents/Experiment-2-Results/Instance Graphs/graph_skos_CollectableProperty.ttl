@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+skos:CollectableProperty a rdf:Class ;
+  rdf:label 'Collectable Property'@en ;
+  rdf:comment 'A concept property that can be used to group:
+
+- concepts that may be collected (e.g. specimens);
+
+- concepts that are documented separately (e.g. manuscripts);
+
+- concepts that have a separate existence (e.g. coins).'@en .

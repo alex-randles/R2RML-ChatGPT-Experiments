@@ -1,0 +1,42 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <http://example.com/> .
+
+ex:collection1 a prov:Collection ;
+  rdfs:label 'My Collection'@en ;
+  prov:hadMember ex:item1, ex:item2, ex:item3 ;
+  prov:wasGeneratedBy ex:process1 ;
+  prov:wasDerivedFrom ex:sourceDataset ;
+  .
+  
+ex:item1 a prov:Entity ;
+  rdfs:label 'Item 1'@en ;
+  prov:wasGeneratedBy ex:process1 ;
+  .
+
+ex:item2 a prov:Entity ;
+  rdfs:label 'Item 2'@en ;
+  prov:wasGeneratedBy ex:process1 ;
+  .
+
+ex:item3 a prov:Entity ;
+  rdfs:label 'Item 3'@en ;
+  prov:wasGeneratedBy ex:process1 ;
+  .
+
+ex:process1 a prov:Activity ;
+  rdfs:label 'My Process'@en ;
+  prov:used ex:inputDataset .
+  
+ex:inputDataset a prov:Entity ;
+  rdfs:label 'Input Dataset'@en .
+  
+ex:sourceDataset a prov:Entity ;
+  rdfs:label 'Source Dataset'@en ;
+  prov:wasGeneratedBy ex:sourceProcess .
+  
+ex:sourceProcess a prov:Activity ;
+  rdfs:label 'Source Process'@en ;
+  prov:used ex:rawData .
+  
+ex:rawData a prov:Entity ;
+  rdfs:label 'Raw Data'@en .

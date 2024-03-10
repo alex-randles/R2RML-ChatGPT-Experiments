@@ -1,0 +1,58 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+<#TriplesMap1>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-1/";
+        rr:class skos:Concept;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:topConceptOf;
+        rr:object <http://data.example.com/sampleTriples-2/>
+    ].
+
+<#TriplesMap2>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-2/";
+        rr:class skos:ConceptScheme;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:hasTopConcept;
+        rr:object <http://data.example.com/sampleTriples-1/>
+
+    ].
+
+<#TriplesMap3>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-3/";
+        rr:class skos:OrderedCollection;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:memberList;
+        rr:object <http://data.example.com/sampleList-1/> ;
+    ].
+
+<#TriplesMap4>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-4/";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [ rr:object skos:CollectableProperty ];
+    ].
+
+<#TriplesMap5>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-5/" ;
+        rr:class skos:Collection;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:member;
+        rr:object <http://data.example.com/sampleTriples-1/> ; 
+    ].

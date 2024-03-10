@@ -1,0 +1,8 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT ?group (COUNT(?member) AS ?count)
+WHERE {
+  ?group prov:hadMember ?member .
+}
+GROUP BY ?group
+HAVING (COUNT(?member) = 1)

@@ -1,0 +1,15 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/> .
+
+ex:subject1 ex:predicate1 ex:object1 .
+ex:subject2 ex:predicate2 ex:object2 .
+
+ex:statement1 a rdf:Statement ;
+    rdf:subject ex:subject1 ;
+    rdf:predicate ex:predicate1 ;
+    rdf:object ex:object1 .
+
+ex:statement2 a rdf:Statement ;
+    rdf:subject ex:subject2 ;
+    rdf:predicate ex:predicate2 ;
+    rdf:object ex:object2 .

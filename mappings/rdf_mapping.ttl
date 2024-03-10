@@ -1,0 +1,63 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<#TriplesMap1>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-1/";
+        rr:class rdf:Property;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:object rdfs:Class ;
+    ].
+
+<#TriplesMap2>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-2/";
+        rr:class rdf:List;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:first;
+        rr:object <http://data.example.com/sampleList-1/>;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:rest;
+        rr:object <http://data.example.com/sampleList-2/>;
+    ];
+    .
+
+<#TriplesMap3>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-3/";
+        rr:class rdf:HTML;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:value;
+        rr:objectMap [ rr:column "COLUMN_NAME_3" ];
+    ].
+
+<#TriplesMap4>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-4/";
+        rr:class rdf:Statement;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject;
+        rr:objectMap [ rr:column "COLUMN_NAME_4" ];
+    ].
+
+<#TriplesMap5>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-5/";
+        rr:class rdf:Bag;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdf:value;
+        rr:objectMap [ rr:column "COLUMN_NAME_5" ];
+    ].

@@ -1,0 +1,70 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<#TriplesMap1>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-1/";
+        rr:class prov:Agent;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment;
+        rr:objectMap [ rr:column "COLUMN_NAME_1" ];
+
+    ].
+
+<#TriplesMap2>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-2/";
+        rr:class prov:Activity;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate prov:used;
+        rr:template  <http://data.example.com/sampleTriples-4/>;
+    ].
+
+<#TriplesMap3>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-3/";
+        rr:class prov:Location;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment;
+        rr:objectMap [ rr:column "COLUMN_NAME_3" ];
+    ].
+
+<#TriplesMap4>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-4/";
+        rr:class prov:Entity;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate prov:atLocation;
+        rr:object <http://data.example.com/sampleTriples-3/> ;
+    ]; 
+    
+    rr:predicateObjectMap [
+        rr:predicate prov:generatedAtTime;
+        rr:objectMap [ rr:column "COLUMN_NAME_3"; rr:datatype xsd:dateTime; ];
+    ]; 
+    rr:predicateObjectMap [
+        rr:predicate prov:wasGeneratedBy;
+        rr:object <http://data.example.com/sampleTriples-2/>;
+    ]; 
+    .
+
+<#TriplesMap5>
+    rr:logicalTable [ rr:tableName "SAMPLE_DATA" ];
+    rr:subjectMap [
+        rr:template "http://data.example.com/sampleTriples-5/";
+        rr:class prov:Collection;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate prov:hadMember;
+        rr:object <http://data.example.com/sampleTriples-4/>;
+    ].

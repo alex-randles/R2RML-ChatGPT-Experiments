@@ -1,0 +1,6 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.com/activity/123> a prov:Activity ;
+  prov:used <http://example.com/resource/456> .
+
+<http://example.com/resource/456> a prov:Entity .

@@ -1,0 +1,8 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <http://example.org/> .
+
+ex:Collection1 a prov:Collection ;
+  prov:hadMember ex:Entity1 ;
+  prov:hadMember ex:Entity2 ;
+  prov:hadMember ex:Entity3 .

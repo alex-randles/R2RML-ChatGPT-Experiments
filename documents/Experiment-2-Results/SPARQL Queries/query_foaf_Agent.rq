@@ -1,0 +1,8 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+ASK {
+  ?agent a foaf:Agent .
+  FILTER NOT EXISTS {
+    ?agent a [ a foaf:Agent ; !sameTerm(?agent) ] .
+  }
+}

@@ -1,0 +1,9 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?person
+WHERE {
+  ?person foaf:knows ?friend .
+  FILTER NOT EXISTS {
+    ?person foaf:knows ?otherFriend .
+    FILTER (?friend != ?otherFriend)
+  }
+}

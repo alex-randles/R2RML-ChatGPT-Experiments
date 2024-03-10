@@ -1,0 +1,11 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+ASK {
+  {
+    SELECT (COUNT(*) AS ?count)
+    WHERE {
+      ?s a prov:Collection .
+    }
+  }
+  FILTER (?count = 1)
+}

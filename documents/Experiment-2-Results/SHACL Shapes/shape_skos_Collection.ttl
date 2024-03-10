@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/data#> .
+
+ex:shape a sh:NodeShape ;
+    sh:targetClass skos:Collection ;
+    sh:property [
+        sh:path rdf:first ;
+        sh:maxCount 1 ;
+    ] .

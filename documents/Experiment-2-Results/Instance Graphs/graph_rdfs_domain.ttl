@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ex: <http://example.org/>.
+
+ex:Person a rdfs:Class ;
+   rdfs:label 'Person'@en ;
+   rdfs:comment 'A human being.'@en ;
+   rdfs:subClassOf ex:Animal ;
+   rdfs:domain ex:hasName .
+
+ex:hasName a rdf:Property ;
+   rdfs:domain ex:NamedEntity ;
+   rdfs:range rdfs:Literal ;
+   rdfs:label 'has name'@en ;
+   rdfs:comment 'The name of something.'@en .

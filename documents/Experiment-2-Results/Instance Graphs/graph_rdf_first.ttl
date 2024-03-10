@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/> .
+
+ex:myList rdf:type rdf:List ;
+         rdf:first 'apple' ;
+         rdf:rest _:b0 .
+
+_:b0 rdf:type rdf:List ;
+     rdf:first 'banana' ;
+     rdf:rest _:b1 .
+
+_:b1 rdf:type rdf:List ;
+     rdf:first 'cherry' ;
+     rdf:rest rdf:nil .

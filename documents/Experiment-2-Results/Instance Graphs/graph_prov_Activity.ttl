@@ -1,0 +1,7 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://example.org/activity1>
+  a prov:Activity ;
+  prov:label 'Activity 1' ;
+  prov:startTime '2021-01-01T00:00:00Z'^^xsd:dateTime ;
+  prov:endTime '2021-01-01T01:00:00Z'^^xsd:dateTime .

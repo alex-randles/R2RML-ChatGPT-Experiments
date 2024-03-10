@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.com/> .
+
+ex:myScheme a skos:ConceptScheme ;
+  skos:prefLabel 'My SKOS Concept Scheme' ;
+  skos:definition 'An example SKOS concept scheme' ;
+  skos:hasTopConcept ex:myTopConcept ;
+  skos:hasTopConcept ex:anotherTopConcept .
+
+ex:myTopConcept a skos:Concept ;
+  skos:prefLabel 'My Top Concept' ;
+  skos:definition 'An example top-level concept in my SKOS concept scheme' .
+
+ex:anotherTopConcept a skos:Concept ;
+  skos:prefLabel 'Another Top Concept' ;
+  skos:definition 'Another example top-level concept in my SKOS concept scheme' .
