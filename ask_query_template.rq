@@ -1,0 +1,4 @@
+ASK 
+WHERE { 
+    GRPAH <ontology> { <concept_name> <test_term> <chatgpt_output> . }
+}
