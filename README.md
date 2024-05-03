@@ -21,3 +21,7 @@ A repository containing data related to the experiements completed using R2RML-C
 ### Experimentation Diagram
 ![alt text](https://github.com/alex-randles/R2RML-ChatGPT-Experiments/blob/main/images/evaluation_diagram.png)
 *Workflow of Experimentation completed using R2RML-ChatGPT Framework*
+
+
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+
